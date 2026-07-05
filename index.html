@@ -169,6 +169,25 @@
             color: var(--water-mid);
         }
 
+        .about-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(7,59,76,0.15);
+            padding: 36px;
+            font-size: 1.1em;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto;
+            border-top: 6px solid var(--water-mid);
+            text-align: left;
+        }
+        .about-card p:first-child {
+            margin-top: 0;
+        }
+        .about-card strong {
+            color: var(--water-mid);
+        }
+
         footer {
             background-color: var(--water-deep);
             color: var(--water-light);
@@ -239,6 +258,7 @@
         <p class="tagline">Pagaia, gioca, vinci &mdash; in acqua con noi</p>
         <nav>
             <button class="tab-button active" data-tab="home" onclick="showTab('home')">Home</button>
+            <button class="tab-button" data-tab="chisiamo" onclick="showTab('chisiamo')">Chi Siamo</button>
             <button class="tab-button" data-tab="contatti" onclick="showTab('contatti')">Contatti</button>
         </nav>
         <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none">
@@ -265,6 +285,13 @@
                     <rect x="-2.5" y="-8" width="5" height="42" rx="2.5" fill="var(--wood-paddle,#c9873f)"/>
                 </g>
             </svg>
+        </section>
+
+        <section id="chisiamo" class="page-section">
+            <div class="about-card">
+                <p>Siamo il Club Canoa Kayak Cervia, squadra sportiva di Canoa Polo con anni di esperienza. In questa disciplina ci porta avanti la passione che abbiamo per il gioco di squadra e l'adrenalina di ogni partita.</p>
+                <p><strong>Dove:</strong> Bacino della Standiana, Ravenna (RA) &ndash; Csrc Portuali Ravenna</p>
+            </div>
         </section>
 
         <section id="contatti" class="page-section">
