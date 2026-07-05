@@ -255,26 +255,53 @@
         }
         .hero-graphic .paddle-group {
             transform-origin: 150px 90px;
-            animation: paddleRow 2.2s ease-in-out infinite;
+            animation: paddleRow 1.6s ease-in-out infinite;
         }
         .hero-graphic .canoe-hull,
         .hero-graphic .paddler {
-            animation: gentleBob 2.2s ease-in-out infinite;
+            animation: gentleBob 1.6s ease-in-out infinite;
         }
+        .hero-graphic .water-ripple {
+            animation: waterFlow 2s ease-in-out infinite;
+        }
+        .hero-graphic .water-ripple:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .hero-graphic .splash {
+            animation: splashAnim 1.6s ease-in-out infinite;
+            opacity: 0;
+        }
+        .hero-graphic .splash:nth-of-type(1) { animation-delay: 0s; }
+        .hero-graphic .splash:nth-of-type(2) { animation-delay: 0.2s; }
+        .hero-graphic .splash:nth-of-type(3) { animation-delay: 0.4s; }
+        .hero-graphic .splash:nth-of-type(4) { animation-delay: 0.6s; }
         @keyframes paddleRow {
-            0%   { transform: rotate(-28deg); }
-            50%  { transform: rotate(-4deg); }
-            100% { transform: rotate(-28deg); }
+            0%   { transform: rotate(-35deg); }
+            50%  { transform: rotate(5deg); }
+            100% { transform: rotate(-35deg); }
         }
         @keyframes gentleBob {
-            0%   { transform: translateY(0); }
-            50%  { transform: translateY(-2px); }
-            100% { transform: translateY(0); }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25%  { transform: translateY(-3px) rotate(0.5deg); }
+            50%  { transform: translateY(2px) rotate(-0.5deg); }
+            75%  { transform: translateY(-1px) rotate(0.3deg); }
+        }
+        @keyframes waterFlow {
+            0%, 100% { transform: translateX(0); opacity: 0.6; }
+            50% { transform: translateX(10px); opacity: 0.3; }
+        }
+        @keyframes splashAnim {
+            0%   { transform: scale(0.5) translateY(0); opacity: 0; }
+            30%  { transform: scale(1.2) translateY(-8px); opacity: 1; }
+            60%  { transform: scale(0.8) translateY(-12px); opacity: 0.6; }
+            100% { transform: scale(0.3) translateY(-15px); opacity: 0; }
         }
         @media (prefers-reduced-motion: reduce) {
             .hero-graphic .paddle-group,
             .hero-graphic .canoe-hull,
-            .hero-graphic .paddler {
+            .hero-graphic .paddler,
+            .hero-graphic .water-ripple,
+            .hero-graphic .splash {
                 animation: none;
             }
         }
@@ -327,9 +354,9 @@
 <body>
     <header>
         <svg class="hero-graphic" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
-            <!-- increspature dell'acqua -->
-            <path d="M0,122 Q37,112 75,122 T150,122 T225,122 T300,122" stroke="var(--water-light,#d9f2f5)" stroke-width="4" fill="none" opacity="0.6"/>
-            <path d="M0,133 Q37,123 75,133 T150,133 T225,133 T300,133" stroke="var(--water-light,#d9f2f5)" stroke-width="3" fill="none" opacity="0.4"/>
+            <!-- increspature dell'acqua animate -->
+            <path class="water-ripple" d="M0,122 Q37,112 75,122 T150,122 T225,122 T300,122" stroke="var(--water-light,#d9f2f5)" stroke-width="4" fill="none" opacity="0.6"/>
+            <path class="water-ripple" d="M0,133 Q37,123 75,133 T150,133 T225,133 T300,133" stroke="var(--water-light,#d9f2f5)" stroke-width="3" fill="none" opacity="0.4"/>
 
             <!-- scafo della canoa -->
             <g class="canoe-hull">
@@ -350,11 +377,11 @@
                 <ellipse cx="150" cy="142" rx="10" ry="18" fill="var(--wood-paddle,#c9873f)"/>
             </g>
 
-            <!-- schizzi d'acqua -->
-            <circle cx="112" cy="119" r="3" fill="var(--water-light,#d9f2f5)"/>
-            <circle cx="101" cy="124" r="2" fill="var(--water-light,#d9f2f5)"/>
-            <circle cx="193" cy="119" r="3" fill="var(--water-light,#d9f2f5)"/>
-            <circle cx="204" cy="124" r="2" fill="var(--water-light,#d9f2f5)"/>
+            <!-- schizzi d'acqua animati -->
+            <circle class="splash" cx="112" cy="119" r="4" fill="var(--water-light,#d9f2f5)"/>
+            <circle class="splash" cx="101" cy="124" r="3" fill="var(--water-light,#d9f2f5)"/>
+            <circle class="splash" cx="193" cy="119" r="4" fill="var(--water-light,#d9f2f5)"/>
+            <circle class="splash" cx="204" cy="124" r="3" fill="var(--water-light,#d9f2f5)"/>
         </svg>
         <h1>Scuola di Canoa Polo</h1>
         <p class="tagline">Pagaia, gioca, vinci &mdash; in acqua con noi</p>
