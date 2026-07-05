@@ -364,10 +364,25 @@
                 <path d="M62,109 Q150,98 238,109" fill="none" stroke="var(--water-deep,#073b4c)" stroke-width="3" stroke-linecap="round"/>
             </g>
 
-            <!-- pagaiatore -->
+            <!-- pagaiatore dettagliato -->
             <g class="paddler">
-                <rect x="138" y="76" width="24" height="32" rx="11" fill="var(--water-deep,#073b4c)"/>
-                <circle cx="150" cy="67" r="10" fill="#f2c9a0"/>
+                <!-- corpo con giubbotto salvagente -->
+                <ellipse cx="150" cy="88" rx="14" ry="18" fill="var(--ball-orange,#ff6b35)"/>
+                <ellipse cx="150" cy="86" rx="12" ry="15" fill="#ff8c5a"/>
+                <!-- braccia -->
+                <ellipse cx="136" cy="82" rx="6" ry="4" fill="#f2c9a0" transform="rotate(-25 136 82)"/>
+                <ellipse cx="164" cy="82" rx="6" ry="4" fill="#f2c9a0" transform="rotate(25 164 82)"/>
+                <!-- collo -->
+                <rect x="146" y="68" width="8" height="6" fill="#f2c9a0"/>
+                <!-- testa -->
+                <circle cx="150" cy="62" r="11" fill="#f2c9a0"/>
+                <!-- casco protettivo -->
+                <path d="M138,58 Q138,48 150,48 Q162,48 162,58 Q162,52 150,52 Q138,52 138,58 Z" fill="var(--water-deep,#073b4c)"/>
+                <ellipse cx="150" cy="50" rx="13" ry="5" fill="var(--water-mid,#118ab2)"/>
+                <!-- viso -->
+                <circle cx="146" cy="62" r="1.5" fill="#333"/>
+                <circle cx="154" cy="62" r="1.5" fill="#333"/>
+                <path d="M147,67 Q150,70 153,67" stroke="#c9873f" stroke-width="1.5" fill="none" stroke-linecap="round"/>
             </g>
 
             <!-- pagaia in movimento -->
