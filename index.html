@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="it">
- <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scuola di Canoa Polo</title>
     <style>
-        /* Stili CSS per rendere il sito più bello */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f8ff; /* Un colore azzurro chiaro che richiama l'acqua */
+            background-color: #f0f8ff; 
             color: #333;
             margin: 0;
             padding: 0;
             text-align: center;
         }
         header {
-            background-color: #0066cc; /* Blu sportivo */
+            background-color: #0066cc; 
             color: white;
             padding: 30px 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -24,21 +23,23 @@
             font-size: 2.5em;
             margin: 0;
         }
-        main {
+        .content-container {
             padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .intro {
             font-size: 1.2em;
             margin-bottom: 30px;
         }
-        .image-container {
-            margin-bottom: 20px;
+        .image-block {
+            display: block;
+            margin: 20px auto;
         }
         img {
-            border-radius: 12px; /* Angoli arrotondati */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Leggera ombra */
-            max-width: 100%;
-            height: auto;
+            border-radius: 12px; 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+            display: inline-block; /* Forza il browser a considerare l'immagine come elemento visibile */
         }
         .caption {
             font-size: 0.9em;
@@ -52,25 +53,25 @@
             margin-top: 40px;
         }
     </style>
- </head>
- <body>
+</head>
+<body>
 
     <header>
         <h1>Scuola di Canoa Polo</h1>
     </header>
 
-    <main>
+    <div class="content-container">
         <p class="intro">In questo sito troverai tutte le informazioni per iniziare il tuo percorso nella canoa polo!</p>
         
-        <div class="image-container">
+        <div class="image-block">
             <img src="CanoaPoloPlayer.jfif" alt="Giocatore di canoa polo in azione sull'acqua" width="400" height="200">
             <p class="caption">Canoa Kayak Club Cervia</p>
         </div>
-    </main>
+    </div>
 
     <footer>
         <p><strong>Contatti:</strong> <em>Ancora da inserire</em></p>
     </footer>
 
- </body>
+</body>
 </html>
