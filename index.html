@@ -188,6 +188,43 @@
             color: var(--water-mid);
         }
 
+        .rules-card {
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(7,59,76,0.15);
+            padding: 36px;
+            font-size: 1.05em;
+            line-height: 1.7;
+            max-width: 640px;
+            margin: 0 auto;
+            border-top: 6px solid var(--wood-paddle);
+            text-align: left;
+        }
+        .rules-card .rules-intro {
+            font-style: italic;
+            color: var(--water-mid);
+            margin-top: 0;
+            font-weight: 700;
+        }
+        .rules-card h3 {
+            font-family: 'Anton', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            color: var(--water-deep);
+            font-size: 1.1em;
+            margin: 24px 0 10px;
+        }
+        .rules-card h3:first-of-type {
+            margin-top: 18px;
+        }
+        .rules-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .rules-card li {
+            margin-bottom: 8px;
+        }
+
         footer {
             background-color: var(--water-deep);
             color: var(--water-light);
@@ -259,6 +296,7 @@
         <nav>
             <button class="tab-button active" data-tab="home" onclick="showTab('home')">Home</button>
             <button class="tab-button" data-tab="chisiamo" onclick="showTab('chisiamo')">Chi Siamo</button>
+            <button class="tab-button" data-tab="regole" onclick="showTab('regole')">Regole e Basi</button>
             <button class="tab-button" data-tab="contatti" onclick="showTab('contatti')">Contatti</button>
         </nav>
         <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none">
@@ -291,6 +329,30 @@
             <div class="about-card">
                 <p>Siamo il Club Canoa Kayak Cervia, squadra sportiva di Canoa Polo con anni di esperienza. In questa disciplina ci porta avanti la passione che abbiamo per il gioco di squadra e l'adrenalina di ogni partita.</p>
                 <p><strong>Dove:</strong> Bacino della Standiana, Ravenna (RA) &ndash; Csrc Portuali Ravenna</p>
+            </div>
+        </section>
+
+        <section id="regole" class="page-section">
+            <div class="rules-card">
+                <p class="rules-intro">Breve introduzione alla Canoa Polo</p>
+
+                <h3>Le basi</h3>
+                <ul>
+                    <li>Si gioca in due squadre da 5 giocatori (più riserve), a bordo di kayak leggeri e maneggevoli.</li>
+                    <li>Lo scopo è segnare più goal degli avversari, lanciando una palla simile a quella della pallamano in una porta sospesa a circa 2 metri d'altezza.</li>
+                    <li>Il campo di gioco è un'area d'acqua rettangolare, delimitata da boe.</li>
+                    <li>Ogni giocatore usa una pagaia sia per muoversi sia per passare, tirare o difendere.</li>
+                    <li>La partita si divide in due tempi, generalmente di 10 minuti ciascuno.</li>
+                </ul>
+
+                <h3>Regole principali</h3>
+                <ul>
+                    <li>La palla può essere lanciata con le mani o con la pagaia, ma non si può tenere in mano per più di 5 secondi.</li>
+                    <li>È vietato colpire un avversario con la pagaia o ostacolarlo in modo pericoloso: i falli vengono puniti con un tiro libero o, nei casi più gravi, con l'espulsione temporanea.</li>
+                    <li>Si può ribaltare il kayak di un avversario solo se questo ha in mano la palla.</li>
+                    <li>Tutti i giocatori indossano casco ed elmetto protettivo, obbligatori per la sicurezza durante i contatti di gioco.</li>
+                    <li>Vince la squadra che segna più goal al termine dei due tempi.</li>
+                </ul>
             </div>
         </section>
 
